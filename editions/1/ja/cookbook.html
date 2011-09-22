@@ -123,7 +123,7 @@ ALTER TABLE
 </pre>
 
 <p>It is a list of rows sorted by the value of <code>key</code>. The <code>id</code> is added automatically and refers back to the document that created this row. The <code>value</code> is the data you’re looking for. For example purposes, it’s the girl’s age.
-<p><code>key</code>の値に基づく並び替えされた行のリストです。
+<p>これは、<code>key</code>の値でソートされた行のリストです。<code>id</code>は自動的に追加され、その行を作成したドキュメントを指しています。<code>value</code>はあなたが求めているデータです。この例においては、それは女の子の年齢です。
 
 <p>The map function that produces this result is:
 <p>この結果を生成するmap関数は次の通りです。
@@ -454,7 +454,7 @@ function(keys, values) {
 <p>このケースでは、value部分は常にtrueなので無視することができますが、これで、結果に全てのタグが重複なくはいってきたでしょう！
 
 <p>With a small change we can put the reduce to good use, too. Let’s see how many of the non-unique tags are there for each tag. To calculate the tag frequency, we just use the summing up we already learned about. In the map function, we emit a <code>1</code> instead of <code>null</code>:
-<p>それぞれのタグについて、重複の数を数える場合を考えてみましょう。reduce関数もうまく使えるように少し変更します。
+<p>少し変更することで、私達はreduceを十分活用できるようになります。各タグについて、同じタグが何個あるかを考えてみましょう。タグの頻度を求めるために、私達は既に学習した合計を求める方法を使います。map関数では、私たちは<code>null</code>の代わりに<code>1</code>をemitします。
 
 <pre>
 function(dude) {
